@@ -33,6 +33,11 @@ html {
     display: none;
 }
 
+section {
+    margin-top: 8rem;
+    height: 100vh;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     
