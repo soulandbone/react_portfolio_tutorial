@@ -54,28 +54,18 @@
   /* ===========================================================MEDIA QUERIES (MEDIUM DEVICES) =============================== */
 
   @media screen and (max-width: 1024px) {
-        /* .services__container {
+        .services__container {
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
-        } */
-        
-        .services__container {
-            grid-template-columns: repeat(4,1fr);
-           
         }
+        
+      
 
         .service {
             height: auto;
         }
 
-        .service:nth-child(1), .service:nth-child(2) {
-            grid-column: span 2;
-        }
-
-        .service:nth-last-child(1){
-            grid-column-start:2;
-            grid-column-end: span 2;
-        }
+        
     
     
     }
@@ -85,18 +75,13 @@
 
     
         .services__container {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
          gap: 1.5rem;
         }
 
-        .service {
-            grid-column: span 1;
-        }
+       
 
-        .service:nth-last-child(1){
-            grid-column-start:1;
-            grid-column-end: span 2;
-        }
+    
 
         
         
