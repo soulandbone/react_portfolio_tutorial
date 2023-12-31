@@ -35,7 +35,7 @@ const Nav = () => {
     <nav>
       {navLinks.map(link => (
         <a 
-        id={link.href}
+        key={link.href}
         className={checkHref(link.href)}
         href={link.href}
         onClick={handleClick}

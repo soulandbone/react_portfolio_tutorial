@@ -10,22 +10,22 @@ const data = [
   {
     avatar: AVTR1,
     name: 'Tina Snow',
-    review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non a, officia necessitatibus tempora dignissimos libero pariatur. Pariatur, expedita! Quidem, nobis accusamus maiores officia iusto dignissimos? Aperiam sequi suscipit eum voluptate enim '
+    review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non a, officia necessitatibus tempora dignissimos libero pariatur. Pariatur, expedita! Quidem, nobis accusamus maiores officia iusto dignissimas? Aperiam sequi suscipit eum voluptate enim '
   },
   {
     avatar: AVTR2,
     name: 'Shatta Wale',
-    review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non a, officia necessitatibus tempora dignissimos libero pariatur. Pariatur, expedita! Quidem, nobis accusamus maiores officia iusto dignissimos? Aperiam sequi suscipit eum voluptate enim '
+    review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non a, officia necessitatibus tempora dignissimos libero pariatur. Pariatur, expedita! Quidem, nobis accusamus maiores officia iusto dignissimes? Aperiam sequi suscipit eum voluptate enim '
   },
   {
     avatar: AVTR3,
     name: 'Kwame Despite',
-    review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non a, officia necessitatibus tempora dignissimos libero pariatur. Pariatur, expedita! Quidem, nobis accusamus maiores officia iusto dignissimos? Aperiam sequi suscipit eum voluptate enim '
+    review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non a, officia necessitatibus tempora dignissimos libero pariatur. Pariatur, expedita! Quidem, nobis accusamus maiores officia iusto dignissimis? Aperiam sequi suscipit eum voluptate enim '
   },
   {
     avatar: AVTR4,
     name: 'Nana Ama McBrown',
-    review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non a, officia necessitatibus tempora dignissimos libero pariatur. Pariatur, expedita! Quidem, nobis accusamus maiores officia iusto dignissimos? Aperiam sequi suscipit eum voluptate enim '
+    review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis non a, officia necessitatibus tempora dignissimos libero pariatur. Pariatur, expedita! Quidem, nobis accusamus maiores officia iusto dignissimas? Aperiam sequi suscipit eum voluptate enim '
   }
 ]
 
@@ -36,34 +36,18 @@ const Testimonials = () => {
       <h2>Testimonials</h2>
 
       <div className="container testimonials__container">
-        <article className="testimonial">
+        {data.map(({avatar, name, review}, index) => (
+          <article className="testimonial" key={index}>
           <div className="client__avatar">
-            <img src={AVTR1} alt="Avatar One" />
+            <img src={avatar} alt={name} />
           </div>
-          <h5 className='client__name'>Ernest Achiever</h5>
-            <small className='client__review'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nam velit magni tenetur nisi, soluta voluptas accusantium saepe dolore fuga tempora quibusdam doloremque numquam aliquam, voluptatem ea delectus sit corrupti.</small>
+          <h5 className='client__name'>{name}</h5>
+            <small className='client__review'>{review}</small>
         </article>
-        <article className="testimonial">
-          <div className="client__avatar">
-            <img src={AVTR2} alt="Avatar One" />
-          </div>
-          <h5 className='client__name'>Ernest Achiever</h5>
-            <small className='client__review'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nam velit magni tenetur nisi, soluta voluptas accusantium saepe dolore fuga tempora quibusdam doloremque numquam aliquam, voluptatem ea delectus sit corrupti.</small>
-        </article>
-        <article className="testimonial">
-          <div className="client__avatar">
-            <img src={AVTR3} alt="Avatar One" />
-          </div>
-          <h5 className='client__name'>Ernest Achiever</h5>
-            <small className='client__review'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nam velit magni tenetur nisi, soluta voluptas accusantium saepe dolore fuga tempora quibusdam doloremque numquam aliquam, voluptatem ea delectus sit corrupti.</small>
-        </article>
-        <article className="testimonial">
-          <div className="client__avatar">
-            <img src={AVTR4} alt="Avatar One" />
-          </div>
-          <h5 className='client__name'>Ernest Achiever</h5>
-            <small className='client__review'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, nam velit magni tenetur nisi, soluta voluptas accusantium saepe dolore fuga tempora quibusdam doloremque numquam aliquam, voluptatem ea delectus sit corrupti.</small>
-        </article>
+        ))}
+        
+      
+        
       </div>
 
     </section>
