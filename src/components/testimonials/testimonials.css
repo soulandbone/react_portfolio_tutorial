@@ -31,6 +31,16 @@
 
 }
 
+.swiper-pagination-bullet-active {
+    background:var(--color-primary)
+}
+
+
+
+
+
+
+
 /* ===========================================================MEDIA QUERIES (MEDIUM DEVICES) =============================== */
 
 @media screen and (max-width: 1024px) {

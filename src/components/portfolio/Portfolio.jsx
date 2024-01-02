@@ -8,6 +8,7 @@ import IMG5 from '../../assets/portfolio5.png';
 import IMG6 from '../../assets/portfolio6.jpg';
 
 
+
 const data = [
   {
     id:1,
